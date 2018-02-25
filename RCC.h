@@ -1,0 +1,2 @@
+void RCCInit();
+void PeriphON();

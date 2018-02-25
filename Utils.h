@@ -1,0 +1,3 @@
+#include "stdint.h"
+
+uint16_t fuckFilter(uint16_t *mass, uint8_t lenght);

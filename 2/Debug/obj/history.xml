@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F103C8 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace -I..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x -I..\..\..\workspace\2\cmsis_boot -I..\..\..\workspace\2\stm_lib -I..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master -I..\..\.. -I..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306 -I..\..\..\workspace\2\stm_lib\inc -I..\..\..\workspace\2 -I..\..\..\workspace\2\cmsis">
+      <target file="Utils.o" lastModified="161cd555728">
+         <source file="..\..\..\Utils.c" lastModified="161cc194dfa"/>
+      </target>
+      <target file="fonts.o" lastModified="161cd55563c">
+         <source file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\fonts.c" lastModified="15419246c10"/>
+      </target>
+      <target file="stm32f10x_rcc.o" lastModified="161cd555441">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="161b711061b"/>
+      </target>
+      <target file="Display.o" lastModified="161cd554f7d">
+         <source file="..\..\..\Display.c" lastModified="161ccbab30a"/>
+      </target>
+      <target file="GPIO.o" lastModified="161cd555308">
+         <source file="..\..\..\GPIO.c" lastModified="161cc82fd24"/>
+      </target>
+      <target file="stm32f10x_i2c.o" lastModified="161cd5559e6">
+         <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="161ccb2e31f"/>
+      </target>
+      <target file="ssd1306.o" lastModified="161cd555923">
+         <source file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\ssd1306.c" lastModified="15419246c10"/>
+      </target>
+      <target file="misc.o" lastModified="161cd55583f">
+         <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0"/>
+      </target>
+      <target file="startup_stm32f10x_md.o" lastModified="161cd555061">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="161b710f988"/>
+      </target>
+      <target file="Timer.o" lastModified="161cd5554c2">
+         <source file="..\..\..\Timer.c" lastModified="161cc901e3a"/>
+      </target>
+      <target file="Interrupt.o" lastModified="161cd555aab">
+         <source file="..\..\..\Interrupt.c" lastModified="161ccb24e1c"/>
+      </target>
+      <target file="initFuction.o" lastModified="161cd5550e2">
+         <source file="..\..\..\initFuction.c" lastModified="161cbfc2abb"/>
+      </target>
+      <target file="ADC.o" lastModified="161cd55538c">
+         <source file="..\..\..\ADC.c" lastModified="161cc4d653b"/>
+      </target>
+      <target file="stm32f10x_gpio.o" lastModified="161cd555198">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="161b7112416"/>
+      </target>
+      <target file="system_stm32f10x.o" lastModified="161cd555003">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f"/>
+      </target>
+      <target file="stm32f10x_tim.o" lastModified="161cd554ebe">
+         <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="161cc3e0a53"/>
+      </target>
+      <target file="stm32f10x_adc.o" lastModified="161cd555583">
+         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="161b74572b0"/>
+      </target>
+      <target file="ssd1306_i2c.o" lastModified="161cd5556c9">
+         <source file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\ssd1306_i2c.c" lastModified="15419246c10"/>
+      </target>
+      <target file="stm32f10x_dma.o" lastModified="161cd5557bc">
+         <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="161b7456871"/>
+      </target>
+      <target file="RCC.o" lastModified="161cd555290">
+         <source file="..\..\..\RCC.c" lastModified="161cc7ecb12"/>
+      </target>
+      <target file="main.o" lastModified="161cd572250">
+         <source file="..\..\..\main.c" lastModified="161cd571e89"/>
+      </target>
+   </processor>
+</history>
