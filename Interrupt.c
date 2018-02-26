@@ -12,6 +12,7 @@ extern uint16_t ADCBuffer[50];
 extern float current;
 extern float Vbat;
 extern float resistanceCoilNow;
+extern uint32_t millis;
 
 void NVICInit() {
 	NVIC_InitTypeDef nvic;
@@ -71,4 +72,9 @@ void EXTI2_IRQHandler(void) {
         /* Clear interrupt flag */
         EXTI_ClearITPendingBit(EXTI_Line2);
     }
+}
+
+void SysTick_Handler(void)
+{
+  millis++;
 }

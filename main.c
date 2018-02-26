@@ -19,6 +19,11 @@ extern uint16_t ADCBuffer[50];
 extern float current;
 extern uint8_t flagFire;
 
+void initMillisFunction() {
+	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
+	SysTick_Config(89999);
+}
+
 int main(void)
 {
 	RCCInit();
@@ -28,6 +33,7 @@ int main(void)
 	initADC_DMA();
 	TimerInit();
 	EXTInit();
+	initMillisFunction();
 	//DisplayInit();
 
 	__enable_irq();

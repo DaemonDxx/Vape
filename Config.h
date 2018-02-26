@@ -12,3 +12,4 @@ float Vbat;
 float resistanceCoil;
 float resistanceCoilNow;
 uint8_t flagFire;
+uint32_t millis;
