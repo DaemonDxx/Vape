@@ -11,12 +11,6 @@
       </source>
       <source file="..\..\..\GPIO.h" lastModified="161d13e4320">
       </source>
-      <source file="..\..\..\GPIO.c" lastModified="161d143511b">
-         <include file="..\..\..\GPIO.h"/>
-         <include file="..\..\..\Config.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\Utils.h"/>
-      </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -35,14 +29,14 @@
       <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\Utils.h" lastModified="161d14354f3">
+      <source file="..\..\..\Utils.h" lastModified="161d14cb893">
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="161b7456870">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
       </source>
-      <source file="..\..\..\Utils.c" lastModified="161d14354e1">
+      <source file="..\..\..\Utils.c" lastModified="161d14cb885">
          <include file="..\..\..\Utils.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
@@ -50,7 +44,7 @@
       </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="161b710f816">
       </source>
-      <source file="..\..\..\Config.h" lastModified="161d13ed306">
+      <source file="..\..\..\Config.h" lastModified="161d14d66cd">
       </source>
       <source file="..\..\..\Display.h" lastModified="161ccb24e49">
       </source>
@@ -88,7 +82,9 @@
       </source>
       <source file="..\..\..\RCC.h" lastModified="161cbfc2adc">
       </source>
-      <source file="..\..\..\main.c" lastModified="161d143c583">
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="161b710f817">
+      </source>
+      <source file="..\..\..\main.c" lastModified="161d14efc89">
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
@@ -100,8 +96,6 @@
          <include file="..\..\..\GPIO.h"/>
          <include file="..\..\..\Timer.h"/>
          <include file="..\..\..\Display.h"/>
-      </source>
-      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="161b710f817">
       </source>
       <source file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\fonts.c" lastModified="15419246c10">
          <include file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\fonts.h"/>
@@ -249,94 +243,6 @@
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
    </includePath>
-   <includePath signature="/I..\..\..\..\..\Users\Daemon\Documents /I..\..\..\workspace /I..\..\..\workspace\2\cmsis_boot /I..\..\..\workspace\2\stm_lib /I..\..\..\..\..\Users\Daemon /I..\..\..\..\..\Users /I..\..\..\workspace\2\stm_lib\inc /I..\..\..\workspace\2 /I..\..\..\workspace\2\cmsis">
-      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="161b7112416">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="161b74572ae">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="161b710f990">
-      </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="161b7456870">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
-      </source>
-      <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
-         <include file="..\..\..\stm_lib\inc\misc.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="161b710f988">
-      </source>
-      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="161b768b4dd">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="161b711061b">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="161b74572b0">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="161b7456871">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="161b7112415">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-   </includePath>
-   <includePath signature="/I..\..\..\workspace /I..\..\..\..\..\Users\Daemon\Documents /I..\..\..\workspace\2\cmsis_boot /I..\..\..\workspace\2\stm_lib /I..\..\..\..\..\Users\Daemon /I..\..\..\..\..\Users /I..\..\..\workspace\2\stm_lib\inc /I..\..\..\workspace\2 /I..\..\..\workspace\2\cmsis">
-      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="161b7112416">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="161b74572ae">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="161b710f990">
-      </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="161b7456870">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
-      </source>
-      <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
-         <include file="..\..\..\stm_lib\inc\misc.h"/>
-      </source>
-      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="161b710f988">
-      </source>
-      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="161b768b4dd">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="161b711061b">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="161b74572b0">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="161b7456871">
-         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="161b7112415">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-   </includePath>
    <includePath signature="/I..\..\..\workspace /I..\..\..\..\..\Users\Daemon\Documents /I..\..\..\workspace\2\cmsis_boot /I..\..\..\workspace\2\stm_lib /I..\..\..\workspace\2\stm_lib\inc /I..\..\..\..\..\Users\Daemon /I..\..\..\..\..\Users /I..\..\..\workspace\2 /I..\..\..\workspace\2\cmsis">
       <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -385,6 +291,94 @@
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="161cc3e0a51">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\workspace /I..\..\..\..\..\Users\Daemon\Documents /I..\..\..\workspace\2\cmsis_boot /I..\..\..\workspace\2\stm_lib /I..\..\..\..\..\Users\Daemon /I..\..\..\..\..\Users /I..\..\..\workspace\2\stm_lib\inc /I..\..\..\workspace\2 /I..\..\..\workspace\2\cmsis">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="161b7112416">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="161b74572ae">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="161b710f990">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="161b7456870">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
+      </source>
+      <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="161b710f988">
+      </source>
+      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="161b768b4dd">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="161b711061b">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="161b74572b0">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="161b7456871">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="161b7112415">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\..\..\Users\Daemon\Documents /I..\..\..\workspace /I..\..\..\workspace\2\cmsis_boot /I..\..\..\workspace\2\stm_lib /I..\..\..\..\..\Users\Daemon /I..\..\..\..\..\Users /I..\..\..\workspace\2\stm_lib\inc /I..\..\..\workspace\2 /I..\..\..\workspace\2\cmsis">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="161b7112416">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="161b74572ae">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="161b710f990">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="161b710f98f">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_dma.h" lastModified="161b7456870">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
+      </source>
+      <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="161b710f988">
+      </source>
+      <source file="..\..\..\stm_lib\inc\misc.h" lastModified="161b768b4dd">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="161b711061b">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="161b74572b0">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="161b7456871">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="161b7112415">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
    </includePath>

@@ -8,6 +8,7 @@
 #define RESISTANCE_CHAIN 0
 #define BUTTON_UP GPIO_Pin_10
 #define BUTTON_FIRE GPIO_Pin_2
+#define BUTTON_DOWN GPIO_Pin_9
 
 #include "stdint.h"
 
@@ -16,6 +17,7 @@ float Vbat;
 float resistanceCoil;
 float resistanceCoilNow;
 uint8_t flagFire;
+uint8_t mode;
 uint32_t millis;
 uint16_t temp;
 uint16_t power;

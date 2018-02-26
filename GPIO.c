@@ -22,7 +22,7 @@ void GPIOInit() {
 
 	GPIO_InitTypeDef fire;
 	fire.GPIO_Mode = GPIO_Mode_IPD;
-	fire.GPIO_Pin = BUTTON_FIRE|BUTTON_UP;
+	fire.GPIO_Pin = BUTTON_FIRE|BUTTON_UP|BUTTON_DOWN;
 	fire.GPIO_Speed = GPIO_Speed_10MHz;
 	GPIO_Init(GPIOA, &fire);
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource2);
@@ -35,7 +35,18 @@ void checkButtons() {
 		while (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
 			k = (uint8_t) 1 +(getMillis()-timePress)/1000;
 			paramUp(k);
+			delay(500);
 		}
 	}
+
+	if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
+			timePress = getMillis();
+			uint8_t k;
+			while (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
+				k = (uint8_t) 1 +(getMillis()-timePress)/1000;
+				paramDown(k);
+				delay(500);
+			}
+		}
 }
 

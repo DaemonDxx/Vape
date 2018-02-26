@@ -2,6 +2,10 @@
 #include "stdint.h"
 
 extern uint32_t millis;
+extern uint8_t mode;
+extern uint16_t temp;
+extern uint16_t power;
+extern uint16_t maxPower;
 
 uint16_t fuckFilter(uint16_t *mass, uint8_t lenght) {
 	uint32_t sum = 0;
@@ -22,7 +26,22 @@ uint32_t getMillis() {
 }
 
 void paramUp(uint8_t k) {
+  if (mode == 0) {
+	  temp += k;
+  } else {
+	  power += k;
+	  if (power > maxPower) {
+		  power = maxPower;
+	  }
+  }
+}
 
+void paramDown(uint8_t k) {
+	if (mode == 0) {
+		  temp -= k;
+	  } else {
+		  power -= k;
+	  }
 }
 
 void delay(uint16_t time) {

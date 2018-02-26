@@ -18,6 +18,7 @@
 extern uint16_t ADCBuffer[50];
 extern float current;
 extern uint8_t flagFire;
+extern uint16_t temp;
 
 void initMillisFunction() {
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
@@ -41,10 +42,10 @@ int main(void)
 	startUpdateCurrent();
 	startUpdateVBat();
 	//startUpdateCurrent();
+	temp = 300;
     while(1)
     {
-    	delay(5000);
-    	delay(10000);
+    	checkButtons();
     }
 }
 
