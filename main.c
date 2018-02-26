@@ -24,6 +24,7 @@ void initMillisFunction() {
 	SysTick_Config(89999);
 }
 
+
 int main(void)
 {
 	RCCInit();
@@ -42,7 +43,8 @@ int main(void)
 	//startUpdateCurrent();
     while(1)
     {
-
+    	delay(5000);
+    	delay(10000);
     }
 }
 

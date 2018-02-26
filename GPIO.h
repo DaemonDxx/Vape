@@ -1,1 +1,2 @@
 void GPIOInit();
+void checkButtons();

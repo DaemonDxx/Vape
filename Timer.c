@@ -30,7 +30,7 @@ void TimerInit(){
 	pwm.TIM_OCMode = TIM_OCMode_PWM1;
 	pwm.TIM_OCPolarity = TIM_OCPolarity_High;
 	pwm.TIM_OutputState = TIM_OutputState_Enable;
-	pwm.TIM_Pulse = 3000;
+	pwm.TIM_Pulse = 0;
 
 	TIM_OC4Init(TIM2, &pwm);
 	TIM_Cmd(TIM2, ENABLE);
