@@ -18,6 +18,10 @@ float resistanceCoil;
 float resistanceCoilNow;
 uint8_t flagFire;
 uint8_t mode;
+#define VERIWATT_MODE 1
+#define TEMP_CONTROL_MODE 0
+
+
 uint32_t millis;
 uint16_t temp;
 uint16_t power;

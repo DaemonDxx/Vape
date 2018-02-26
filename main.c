@@ -19,6 +19,7 @@ extern uint16_t ADCBuffer[50];
 extern float current;
 extern uint8_t flagFire;
 extern uint16_t temp;
+extern uint16_t maxPower;
 
 void initMillisFunction() {
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
@@ -43,6 +44,7 @@ int main(void)
 	startUpdateVBat();
 	//startUpdateCurrent();
 	temp = 300;
+	maxPower = 300;
     while(1)
     {
     	checkButtons();

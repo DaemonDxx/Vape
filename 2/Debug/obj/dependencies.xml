@@ -11,6 +11,12 @@
       </source>
       <source file="..\..\..\GPIO.h" lastModified="161d13e4320">
       </source>
+      <source file="..\..\..\GPIO.c" lastModified="161d15d7a19">
+         <include file="..\..\..\GPIO.h"/>
+         <include file="..\..\..\Config.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\Utils.h"/>
+      </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="161b711061a">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -36,15 +42,16 @@
       </source>
       <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="161b710f98e">
       </source>
-      <source file="..\..\..\Utils.c" lastModified="161d14cb885">
+      <source file="..\..\..\Utils.c" lastModified="161d1572db6">
          <include file="..\..\..\Utils.h"/>
+         <include file="..\..\..\Config.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\misc.c" lastModified="161b768b4e0">
          <include file="..\..\..\stm_lib\inc\misc.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="161b710f816">
       </source>
-      <source file="..\..\..\Config.h" lastModified="161d14d66cd">
+      <source file="..\..\..\Config.h" lastModified="161d1558161">
       </source>
       <source file="..\..\..\Display.h" lastModified="161ccb24e49">
       </source>
@@ -82,9 +89,7 @@
       </source>
       <source file="..\..\..\RCC.h" lastModified="161cbfc2adc">
       </source>
-      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="161b710f817">
-      </source>
-      <source file="..\..\..\main.c" lastModified="161d14efc89">
+      <source file="..\..\..\main.c" lastModified="161d15fb9a1">
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_dma.h"/>
@@ -96,6 +101,8 @@
          <include file="..\..\..\GPIO.h"/>
          <include file="..\..\..\Timer.h"/>
          <include file="..\..\..\Display.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="161b710f817">
       </source>
       <source file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\fonts.c" lastModified="15419246c10">
          <include file="..\..\..\..\..\..\..\Users\Daemon\AppData\Local\Temp\Rar$DRa0.256\stm32libs-master\stm32f10x\ssd1306\fonts.h"/>

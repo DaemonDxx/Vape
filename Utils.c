@@ -1,5 +1,6 @@
 #include "Utils.h"
 #include "stdint.h"
+#include "Config.h"
 
 extern uint32_t millis;
 extern uint8_t mode;
@@ -26,7 +27,7 @@ uint32_t getMillis() {
 }
 
 void paramUp(uint8_t k) {
-  if (mode == 0) {
+  if (mode == TEMP_CONTROL_MODE) {
 	  temp += k;
   } else {
 	  power += k;
@@ -37,7 +38,7 @@ void paramUp(uint8_t k) {
 }
 
 void paramDown(uint8_t k) {
-	if (mode == 0) {
+	if (mode == TEMP_CONTROL_MODE) {
 		  temp -= k;
 	  } else {
 		  power -= k;

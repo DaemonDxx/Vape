@@ -4,6 +4,7 @@
 #include "Utils.h"
 
 uint32_t timePress;
+uint8_t mode;
 
 void GPIOInit() {
 	GPIO_InitTypeDef gpioADC;
@@ -28,6 +29,15 @@ void GPIOInit() {
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource2);
 }
 
+void toggleMode () {
+	if (mode == TEMP_CONTROL_MODE) {
+		mode = VERIWATT_MODE;
+	} else {
+		mode = TEMP_CONTROL_MODE;
+	}
+	delay(1000);
+}
+
 void checkButtons() {
 	if (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
 		timePress = getMillis();
@@ -36,6 +46,9 @@ void checkButtons() {
 			k = (uint8_t) 1 +(getMillis()-timePress)/1000;
 			paramUp(k);
 			delay(500);
+			if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
+				toggleMode();
+			}
 		}
 	}
 
