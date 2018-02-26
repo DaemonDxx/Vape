@@ -1,1 +1,2 @@
 void NVICInit();
+void EXTInit();

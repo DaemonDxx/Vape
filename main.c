@@ -17,6 +17,7 @@
 
 extern uint16_t ADCBuffer[50];
 extern float current;
+extern uint8_t flagFire;
 
 int main(void)
 {
@@ -26,6 +27,7 @@ int main(void)
 	NVICInit();
 	initADC_DMA();
 	TimerInit();
+	EXTInit();
 	//DisplayInit();
 
 	__enable_irq();
