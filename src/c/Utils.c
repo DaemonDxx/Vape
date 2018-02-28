@@ -6,8 +6,10 @@
 extern uint32_t millis;
 extern uint8_t mode;
 extern uint16_t maxTemp;
+extern uint16_t nowTemp;
 extern uint16_t power;
 extern uint16_t maxPower;
+extern float resistanceCoilNow;
 
 //Обычный фильтр для результатов АЦП
 uint16_t fuckFilter(uint16_t *mass, uint8_t lenght) {
@@ -58,16 +60,18 @@ void delay(uint16_t time) {
 	}
 }
 
-uint16_t getPWMCount(uint16_t tempNow, uint16_t tempMax) {
-	return (uint16_t) pid_Controller(tempMax, tempNow);
+uint16_t getPWMCount() {
+	double pwm = pid_Controller(maxTemp, nowTemp);
+	return (uint16_t) pwm;
 }
 
 void PIDInit() {
 	pid_Init(PID_Kp, PID_Ki, PID_Kd);
 }
 
-uint16_t ResistanceToTemp(float resistance) {
-	return (uint16_t) 185.2*(resistance/resistanceCoil)-165.2;
+uint16_t ResistanceToTemp() {
+	float t = 185.2*(resistanceCoilNow/(resistanceCoil))-165.2;
+	return (uint16_t) t;
 }
 
 float TempToResistance(uint16_t temp){

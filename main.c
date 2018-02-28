@@ -15,6 +15,8 @@ extern float current;
 extern uint8_t flagFire;
 extern uint16_t maxTemp;
 extern uint16_t maxPower;
+uint32_t timeUpdate;
+extern uint8_t flagUpdateCurrent;
 
 void initMillisFunction() {
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
@@ -43,11 +45,14 @@ int main(void)
 
 	maxTemp = 300;
 	maxPower = 300;
+	timeUpdate = getMillis();
     while(1)
     {
     	checkButtons();
-    	if (1) {
-
+    	if (getMillis() - timeUpdate > 3000) {
+    		flagUpdateCurrent = 1;
+    		updateResistanceCoil();
+    		timeUpdate = getMillis();
     	}
     }
 }

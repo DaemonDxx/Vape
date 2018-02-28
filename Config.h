@@ -26,7 +26,7 @@
 #define TIME_PRESS_BUTTON 400
 
 //Коэффициенты для пид регулятора
-#define PID_Kp 1.0
+#define PID_Kp 5.0
 
 #define PID_Kd 1.0
 
@@ -58,3 +58,5 @@ uint16_t nowTemp;
 uint16_t power;
 //Максимальная мощность, которую можно получить
 uint16_t maxPower;
+
+uint8_t flagUpdateCurrent;

@@ -8,6 +8,7 @@
 //Время последнего нажатия на кнопку UP или DOWN
 uint32_t timePress;
 extern uint8_t mode;
+extern uint8_t flagUpdateCurrent;
 
 void GPIOInit() {
 	//Пин А1 для снятие падения напряжения с MOSFET
@@ -81,6 +82,7 @@ void checkButtons() {
 			//Режим обновления сопротивления спирали
 			while (getMillis() - timePress < TIME_PRESS_BUTTON) {
 				if (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
+					flagUpdateCurrent = 0;
 					updateResistanceCoil();
 				}
 			}

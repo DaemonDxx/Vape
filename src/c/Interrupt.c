@@ -17,6 +17,7 @@ extern float resistanceCoilNow;
 extern float resistanceCoil;
 extern uint32_t millis;
 extern uint8_t flagFire;
+extern uint8_t flagUpdateCurrent;
 extern uint16_t maxPower;
 extern uint16_t nowTemp;
 extern uint16_t maxTemp;
@@ -57,7 +58,7 @@ void DMA1_Channel1_IRQHandler(void) {
 	current = u/R_MOSFET;
 	resistanceCoilNow = Vbat/current - RESISTANCE_CHAIN;
 	maxPower = (uint16_t) current*current*resistanceCoilNow;
-	nowTemp = ResistanceToTemp(resistanceCoilNow);
+	nowTemp = ResistanceToTemp();
 	if (flagFire == 1) {
 		///Код получения значения для ШИМ
 		uint16_t pwmCount = getPWMCount(nowTemp, maxTemp);
@@ -66,7 +67,9 @@ void DMA1_Channel1_IRQHandler(void) {
 	} else {
 		///Подсчет значения сопротивления и максимальной мощности
 		setPWM(0);
-		resistanceCoil = resistanceCoilNow;
+		if (flagUpdateCurrent != 1) {
+			resistanceCoil = resistanceCoilNow;
+		}
 		startUpdateVBat();
 	}
 	DMA_ClearITPendingBit(DMA1_IT_TC1);
@@ -85,9 +88,11 @@ void EXTI2_IRQHandler(void) {
         if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2) != 0) {
         	startUpdateCurrent();
         	stopUpdateVbat();
+        	flagFire = 1;
         } else {
         	stopUpdateCurrnet();
         	startUpdateVBat();
+        	flagFire = 0;
         }
 
         /* Clear interrupt flag */
