@@ -8,6 +8,7 @@ extern uint16_t temp;
 extern uint16_t power;
 extern uint16_t maxPower;
 
+//Обычный фильтр для результатов АЦП
 uint16_t fuckFilter(uint16_t *mass, uint8_t lenght) {
 	uint32_t sum = 0;
 	uint8_t k = 0;
@@ -22,10 +23,12 @@ uint16_t fuckFilter(uint16_t *mass, uint8_t lenght) {
 	return sum/k;
 }
 
+//Ардуиновская за...па
 uint32_t getMillis() {
 	return millis;
 }
 
+//Увеличение параметра в зависимости от режима
 void paramUp(uint8_t k) {
   if (mode == TEMP_CONTROL_MODE) {
 	  temp += k;
@@ -37,6 +40,7 @@ void paramUp(uint8_t k) {
   }
 }
 
+//Уменьшение параметра в зависимости от режима
 void paramDown(uint8_t k) {
 	if (mode == TEMP_CONTROL_MODE) {
 		  temp -= k;
@@ -45,6 +49,7 @@ void paramDown(uint8_t k) {
 	  }
 }
 
+//Задержка как в ардуино. Считает в мс в своем измерении
 void delay(uint16_t time) {
 	uint32_t startTime = getMillis();
 	while (getMillis()- startTime < time){
