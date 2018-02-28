@@ -7,12 +7,17 @@
 #include "Config.h"
 #include "ADC.h"
 #include "stm32f10x_gpio.h"
+#include "Timer.h"
+#include "stdint.h"
 
 extern uint16_t ADCBuffer[50];
 extern float current;
 extern float Vbat;
 extern float resistanceCoilNow;
+extern float resistanceCoil;
 extern uint32_t millis;
+extern uint8_t flagFire;
+extern uint16_t maxPower;
 
 void NVICInit() {
 	NVIC_InitTypeDef nvic;
@@ -49,8 +54,16 @@ void DMA1_Channel1_IRQHandler(void) {
 	u = fuckFilter(&ADCBuffer, BUFFER_ADC)*3.3/(4095*K_AMPFILLER);
 	current = u/R_MOSFET;
 	resistanceCoilNow = Vbat/current - RESISTANCE_CHAIN;
+	maxPower = (uint16_t) current*current*resistanceCoilNow;
+	if (flagFire == 1) {
+		///Код получения значения для ШИМ
+		startUpdateCurrent();
+	} else {
+		///Подсчет значения сопротивления и максимальной мощности
+		setPWM(0);
+		resistanceCoil = resistanceCoilNow;
+	}
 	DMA_ClearITPendingBit(DMA1_IT_TC1);
-	startUpdateCurrent();
 }
 
 void ADC1_2_IRQHandler(void){

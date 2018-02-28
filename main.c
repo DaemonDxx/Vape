@@ -10,14 +10,10 @@
 #include "Timer.h"
 #include "Display.h"
 
-#define MAX_ADC_VALUE 3730
-#define ADC_K = 1
-#define Ky = 10
-
 extern uint16_t ADCBuffer[50];
 extern float current;
 extern uint8_t flagFire;
-extern uint16_t temp;
+extern uint16_t maxTemp;
 extern uint16_t maxPower;
 
 void initMillisFunction() {
@@ -25,6 +21,9 @@ void initMillisFunction() {
 	SysTick_Config(89999);
 }
 
+void updateParam() {
+
+}
 
 int main(void)
 {
@@ -42,7 +41,7 @@ int main(void)
 
 	startUpdateVBat();
 
-	temp = 300;
+	maxTemp = 300;
 	maxPower = 300;
     while(1)
     {

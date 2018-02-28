@@ -4,7 +4,7 @@
 
 extern uint32_t millis;
 extern uint8_t mode;
-extern uint16_t temp;
+extern uint16_t maxTemp;
 extern uint16_t power;
 extern uint16_t maxPower;
 
@@ -31,7 +31,7 @@ uint32_t getMillis() {
 //”величение параметра в зависимости от режима
 void paramUp(uint8_t k) {
   if (mode == TEMP_CONTROL_MODE) {
-	  temp += k;
+	  maxTemp += k;
   } else {
 	  power += k;
 	  if (power > maxPower) {
@@ -43,7 +43,7 @@ void paramUp(uint8_t k) {
 //”меньшение параметра в зависимости от режима
 void paramDown(uint8_t k) {
 	if (mode == TEMP_CONTROL_MODE) {
-		  temp -= k;
+		  maxTemp -= k;
 	  } else {
 		  power -= k;
 	  }
