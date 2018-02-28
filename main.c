@@ -40,9 +40,9 @@ int main(void)
 	//DisplayInit();
 
 	__enable_irq();
-	startUpdateCurrent();
+
 	startUpdateVBat();
-	//startUpdateCurrent();
+
 	temp = 300;
 	maxPower = 300;
     while(1)

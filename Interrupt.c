@@ -64,9 +64,11 @@ void EXTI2_IRQHandler(void) {
 
     if (EXTI_GetITStatus(EXTI_Line2) != RESET) {
         if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2) != 0) {
-
+        	startUpdateCurrent();
+        	stopUpdateVbat();
         } else {
-
+        	stopUpdateCurrnet();
+        	startUpdateVBat();
         }
 
         /* Clear interrupt flag */

@@ -8,6 +8,8 @@
 #define RESISTANCE_CHAIN 0
 #define BUTTON_UP GPIO_Pin_10
 #define BUTTON_FIRE GPIO_Pin_2
+#define TIME_PRESS_BUTTON 400
+
 #define BUTTON_DOWN GPIO_Pin_9
 
 #include "stdint.h"

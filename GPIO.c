@@ -2,6 +2,7 @@
 #include "Config.h"
 #include "stm32f10x_gpio.h"
 #include "Utils.h"
+#include "Timer.h"
 
 uint32_t timePress;
 uint8_t mode;
@@ -41,14 +42,16 @@ void toggleMode () {
 void checkButtons() {
 	if (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
 		timePress = getMillis();
+		while (getMillis() - timePress < TIME_PRESS_BUTTON) {
+			if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
+							toggleMode();
+						}
+		}
 		uint8_t k;
 		while (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
 			k = (uint8_t) 1 +(getMillis()-timePress)/1000;
 			paramUp(k);
 			delay(500);
-			if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
-				toggleMode();
-			}
 		}
 	}
 
@@ -61,5 +64,9 @@ void checkButtons() {
 				delay(500);
 			}
 		}
+
+	if (GPIO_ReadInputDataBit(GPIOA, BUTTON_FIRE) == 0) {
+			setPWM(0);
+	}
 }
 
