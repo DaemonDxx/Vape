@@ -83,39 +83,39 @@
   <Files>
     <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
-    <File name="src/c/Interrupt.c" path="Interrupt.c" type="1"/>
+    <File name="src/c/Interrupt.c" path="src/c/Interrupt.c" type="1"/>
     <File name="src" path="" type="2"/>
-    <File name="src/c/ADC.c" path="ADC.c" type="1"/>
-    <File name="src/c/Timer.c" path="Timer.c" type="1"/>
-    <File name="src/c/Utils.c" path="Utils.c" type="1"/>
+    <File name="src/c/ADC.c" path="src/c/ADC.c" type="1"/>
+    <File name="src/c/Timer.c" path="src/c/Timer.c" type="1"/>
+    <File name="src/c/Utils.c" path="src/c/Utils.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
     <File name="Config.h" path="Config.h" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="src/c/RCC.c" path="src/c/RCC.c" type="1"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
-    <File name="src/c/RCC.c" path="RCC.c" type="1"/>
     <File name="stm32f10x_conf.h" path="stm32f10x_conf.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
-    <File name="src/h/Interrupt.h" path="Interrupt.h" type="1"/>
-    <File name="src/c/GPIO.c" path="GPIO.c" type="1"/>
-    <File name="src/h/GPIO.h" path="GPIO.h" type="1"/>
+    <File name="src/h/Interrupt.h" path="src/h/Interrupt.h" type="1"/>
+    <File name="src/c/GPIO.c" path="src/c/GPIO.c" type="1"/>
+    <File name="src/h/GPIO.h" path="src/h/GPIO.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
-    <File name="src/h/ADC.h" path="ADC.h" type="1"/>
+    <File name="src/h/ADC.h" path="src/h/ADC.h" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
-    <File name="src/c/Display.c" path="Display.c" type="1"/>
+    <File name="src/c/Display.c" path="src/c/Display.c" type="1"/>
     <File name="src/h" path="" type="2"/>
     <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
-    <File name="src/h/RCC.h" path="RCC.h" type="1"/>
+    <File name="src/h/RCC.h" path="src/h/RCC.h" type="1"/>
     <File name="stm_lib/src" path="" type="2"/>
     <File name="cmsis" path="" type="2"/>
     <File name="stm_lib" path="" type="2"/>
@@ -124,12 +124,12 @@
     <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
-    <File name="src/h/Timer.h" path="Timer.h" type="1"/>
+    <File name="src/h/Timer.h" path="src/h/Timer.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
     <File name="src/c" path="" type="2"/>
-    <File name="src/h/Display.h" path="Display.h" type="1"/>
+    <File name="src/h/Display.h" path="src/h/Display.h" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
     <File name="main.c" path="main.c" type="1"/>
-    <File name="src/h/Utils.h" path="Utils.h" type="1"/>
+    <File name="src/h/Utils.h" path="src/h/Utils.h" type="1"/>
   </Files>
 </Project>
