@@ -18,6 +18,8 @@ extern float resistanceCoil;
 extern uint32_t millis;
 extern uint8_t flagFire;
 extern uint16_t maxPower;
+extern uint16_t nowTemp;
+extern uint16_t maxTemp;
 
 void NVICInit() {
 	NVIC_InitTypeDef nvic;
@@ -55,13 +57,17 @@ void DMA1_Channel1_IRQHandler(void) {
 	current = u/R_MOSFET;
 	resistanceCoilNow = Vbat/current - RESISTANCE_CHAIN;
 	maxPower = (uint16_t) current*current*resistanceCoilNow;
+	nowTemp = ResistanceToTemp(resistanceCoilNow);
 	if (flagFire == 1) {
 		///Код получения значения для ШИМ
+		uint16_t pwmCount = getPWMCount(nowTemp, maxTemp);
+		setPWM(pwmCount);
 		startUpdateCurrent();
 	} else {
 		///Подсчет значения сопротивления и максимальной мощности
 		setPWM(0);
 		resistanceCoil = resistanceCoilNow;
+		startUpdateVBat();
 	}
 	DMA_ClearITPendingBit(DMA1_IT_TC1);
 }

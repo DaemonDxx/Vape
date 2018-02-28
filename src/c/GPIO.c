@@ -3,6 +3,7 @@
 #include "stm32f10x_gpio.h"
 #include "Utils.h"
 #include "Timer.h"
+#include "ADC.h"
 
 //Время последнего нажатия на кнопку UP или DOWN
 uint32_t timePress;
@@ -44,6 +45,11 @@ void toggleMode () {
 	delay(1000);
 }
 
+void updateResistanceCoil(){
+	stopUpdateVbat();
+	startUpdateCurrent();
+}
+
 //Проверка в основном цикле программы какие клавиши нажаты
 void checkButtons() {
 
@@ -72,6 +78,12 @@ void checkButtons() {
 	if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
 			timePress = getMillis();
 			uint8_t k;
+			//Режим обновления сопротивления спирали
+			while (getMillis() - timePress < TIME_PRESS_BUTTON) {
+				if (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {
+					updateResistanceCoil();
+				}
+			}
 			while (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
 				k = (uint8_t) 1 +(getMillis()-timePress)/1000;
 				paramDown(k);
