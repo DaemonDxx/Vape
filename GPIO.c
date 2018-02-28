@@ -44,8 +44,8 @@ void checkButtons() {
 		timePress = getMillis();
 		while (getMillis() - timePress < TIME_PRESS_BUTTON) {
 			if (GPIO_ReadInputDataBit(GPIOA, BUTTON_DOWN) != 0) {
-							toggleMode();
-						}
+				toggleMode();
+			}
 		}
 		uint8_t k;
 		while (GPIO_ReadInputDataBit(GPIOA, BUTTON_UP) != 0) {

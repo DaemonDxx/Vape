@@ -48,6 +48,9 @@ int main(void)
     while(1)
     {
     	checkButtons();
+    	if (1) {
+
+    	}
     }
 }
 
